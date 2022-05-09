@@ -1,0 +1,266 @@
+@font-face {
+    font-family: "Aero";
+    src: url("../assets/fonts/Aero.ttf");
+  }
+  
+  @font-face {
+    font-family: "OldSansBlack";
+    src: url("../assets/fonts/OldSansBlack.ttf");
+  }
+  
+  * {
+    font-family: "Aero";
+  }
+  
+  /* Colors */
+  :root {
+    --brand_dark: #212529;
+    --brand_green: #13ce66;
+    --brand_pink: #fe8bc4;
+    --brand_red: #ff0000;
+    --brand_yellow: #ffcb2c;
+    --brand_orange: #fd7d24;
+  
+    --darkest_gray: #333333;
+    --darker_gray: #666666;
+    --dark_gray: #444444;
+    --brand_gray: #c2c2c2;
+    --light_gray: #dddddd;
+    --lighter_gray: #eeeeee;
+    --lightest_gray: #f2f2f2;
+  
+    --default_rgba: rgba(238, 129, 48, 0.00001);
+    --normal: #a8a77a;
+    --fire: #ee8130;
+    --water: #6390f0;
+    --electric: #f7d02c;
+    --grass: #7ac74c;
+    --ice: #96d9d6;
+    --fighting: #c22e28;
+    --poison: #a33ea1;
+    --ground: #e2bf65;
+    --flying: #a98ff3;
+    --psychic: #f95587;
+    --bug: #a6b91a;
+    --rock: #b6a136;
+    --ghost: #735797;
+    --dragon: #6f35fc;
+    --dark: #705746;
+    --steel: #b7b7ce;
+    --fairy: #d685ad;
+  
+    --card_gray: #495057;
+  }
+  
+  body {
+    margin: 0;
+    background-image: url("../assets/bg.png");
+    background-color: none;
+    background-repeat: repeat;
+  }
+  
+  .container-fluid {
+    max-width: 1144px;
+  }
+  
+  *,
+  *:focus,
+  *:hover {
+    outline: none !important;
+  }
+  
+  button:focus,
+  input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus {
+    border-color: var(--dark_gray) !important;
+    outline: 0 none;
+  }
+  
+  @keyframes updown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  .animation-up-down {
+    animation: updown 1s ease infinite;
+  }
+  
+  /* Colors types */
+  .normal {
+    background-color: var(--normal);
+  }
+  
+  .fire {
+    background-color: var(--fire);
+  }
+  
+  .water {
+    background-color: var(--water);
+  }
+  
+  .electric {
+    background-color: var(--electric);
+  }
+  
+  .grass {
+    background-color: var(--grass);
+  }
+  
+  .ice {
+    background-color: var(--ice);
+  }
+  
+  .fighting {
+    background-color: var(--fighting);
+  }
+  
+  .poison {
+    background-color: var(--poison);
+  }
+  
+  .ground {
+    background-color: var(--ground);
+  }
+  
+  .flying {
+    background-color: var(--flying);
+  }
+  
+  .psychic {
+    background-color: var(--psychic);
+  }
+  
+  .bug {
+    background-color: var(--bug);
+  }
+  
+  .rock {
+    background-color: var(--rock);
+  }
+  
+  .ghost {
+    background-color: var(--ghost);
+  }
+  
+  .dragon {
+    background-color: var(--dragon);
+  }
+  
+  .dark {
+    background-color: var(--dark);
+  }
+  
+  .steel {
+    background-color: var(--steel);
+  }
+  
+  .fairy {
+    background-color: var(--fairy);
+  }
+  
+  /* Colors types text */
+  .text-normal {
+    color: var(--normal);
+  }
+  
+  .text-fire {
+    color: var(--fire);
+  }
+  
+  .text-water {
+    color: var(--water);
+  }
+  
+  .text-electric {
+    color: var(--electric);
+  }
+  
+  .text-grass {
+    color: var(--grass);
+  }
+  
+  .text-ice {
+    color: var(--ice);
+  }
+  
+  .text-fighting {
+    color: var(--fighting);
+  }
+  
+  .text-poison {
+    color: var(--poison);
+  }
+  
+  .text-ground {
+    color: var(--ground);
+  }
+  
+  .text-flying {
+    color: var(--flying);
+  }
+  
+  .text-psychic {
+    color: var(--psychic);
+  }
+  
+  .text-bug {
+    color: var(--bug);
+  }
+  
+  .text-rock {
+    color: var(--rock);
+  }
+  
+  .text-ghost {
+    color: var(--ghost);
+  }
+  
+  .text-dragon {
+    color: var(--dragon);
+  }
+  
+  .text-dark {
+    color: var(--dark);
+  }
+  
+  .text-steel {
+    color: var(--steel);
+  }
+  
+  .text-fairy {
+    color: var(--fairy);
+  }
+  
+  .limit-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  

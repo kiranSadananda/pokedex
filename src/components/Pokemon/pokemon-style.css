@@ -1,0 +1,692 @@
+.container-card {
+    transition: all 0.7s;
+    /* background-color: ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 14px 12px;
+    /* box-shadow: 0 1.6px 1.6px rgb(0 0 0 / 2%), 0 3.8px 3.8px rgb(0 0 0 / 3%), 0 6.9px 6.9px rgb(0 0 0 / 4%), 0 11.4px 11.4px rgb(0 0 0 / 5%), 0 18.8px 18.8px rgb(0 0 0 / 6%), 0 32.8px 32.8px rgb(0 0 0 / 7%), 0 71px 71px rgb(0 0 0 / 9%); */
+    -webkit-box-shadow: 1px 0px 11px 4px rgba(64,64,64,0.8); 
+    box-shadow: 1px 0px 11px 4px rgba(64,64,64,0.8);
+    transition: all .2s ease-in-out;
+  }
+  
+  .container-card:hover {
+    text-decoration: none;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .container-card-img {
+    z-index: 2;
+  }
+  
+  .pokemon-name {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: var(--darkest_gray);
+    text-align: center;
+    margin-top: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .pokemon-number {
+    margin-top: 4px;
+    color: var(--darkest_gray);
+  }
+  
+  .type-item {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  
+  /* normal */
+  .container-normal::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--normal) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-normal::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--normal), var(--default_rgba));
+  }
+  
+  /* fire */
+  .container-fire::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--fire) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-fire::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--fire), var(--default_rgba));
+  }
+  
+  /* water */
+  .container-water::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--water) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-water::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--water), var(--default_rgba));
+  }
+  
+  /* electric */
+  .container-electric::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--electric) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-electric::after {
+    opacity: 1;
+    background-image: linear-gradient(
+      45deg,
+      var(--electric),
+      var(--default_rgba)
+    );
+  }
+  
+  /* grass */
+  .container-grass::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--grass) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-grass::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--grass), var(--default_rgba));
+  }
+  
+  /* ice */
+  .container-ice::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--ice) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-ice::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--ice), var(--default_rgba));
+  }
+  
+  /* fighting  */
+  .container-fighting::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--fighting) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-fighting::after {
+    opacity: 1;
+    background-image: linear-gradient(
+      45deg,
+      var(--fighting),
+      var(--default_rgba)
+    );
+  }
+  
+  /* poison  */
+  .container-poison::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--poison) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-poison::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--poison), var(--default_rgba));
+  }
+  
+  /* ground  */
+  .container-ground::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--ground) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-ground::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--ground), var(--default_rgba));
+  }
+  
+  /* flying  */
+  .container-flying::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--flying) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-flying::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--flying), var(--default_rgba));
+  }
+  
+  /* psychic  */
+  .container-psychic::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--psychic) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-psychic::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--psychic), var(--default_rgba));
+  }
+  
+  /* bug  */
+  .container-bug::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--bug) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-bug::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--bug), var(--default_rgba));
+  }
+  
+  /* rock  */
+  .container-rock::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--rock) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-rock::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--rock), var(--default_rgba));
+  }
+  
+  /* ghost  */
+  .container-ghost::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--ghost) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-ghost::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--ghost), var(--default_rgba));
+  }
+  
+  /* dragon  */
+  .container-dragon::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--dragon) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-dragon::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--dragon), var(--default_rgba));
+  }
+  
+  /* dark  */
+  .container-dark::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--dark) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-dark::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--dark), var(--default_rgba));
+  }
+  
+  /* steel  */
+  .container-steel::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--steel) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-steel::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--steel), var(--default_rgba));
+  }
+  
+  /* fairy  */
+  .container-fairy::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(
+      45deg,
+      var(--fairy) 0 1%,
+      transparent 50% 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: all 1.5s;
+  }
+  
+  .container-card:hover .container-fairy::after {
+    opacity: 1;
+    background-image: linear-gradient(45deg, var(--fairy), var(--default_rgba));
+  }
+  
+  .section-title {
+    font-family: "OldSansBlack";
+    letter-spacing: 4px;
+    font-size: 16px;
+    padding-left: 6px;
+  }
+  
+  /* Details */
+  .overview {
+    line-height: 30px;
+    font-size: 20px;
+    font-family: "OldSansBlack";
+  }
+  
+  .sword,
+  .shield {
+    border: 2px dashed var(--brand_dark) !important;
+    border-radius: 100%;
+  }
+  
+  .sword {
+    background-color: var(--fighting) !important;
+  }
+  
+  .shield {
+    background-color: var(--water) !important;
+  }
+  
+  .container-versions button {
+    background: none;
+    border: none;
+    width: 70px;
+    height: 40px;
+  }
+  
+  .container-versions img {
+    width: 30px;
+  }
+  
+  .container-info {
+    background-color: var(--card_gray);
+    padding: 14px 10px;
+    border-radius: 10px;
+  }
+  
+  .info-item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  
+  .info-item h4 {
+    font-size: 14px;
+    margin-bottom: 0;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    font-family: "OldSansBlack";
+  }
+  
+  .info-item p {
+    margin-bottom: 0;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: "OldSansBlack";
+  }
+  
+  /* Stats */
+  .container-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--card_gray);
+    padding: 14px 12px;
+    border-radius: 10px;
+  }
+  
+  .bar-item {
+    width: 100px;
+  }
+  
+  .bar {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .bar-active {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .container-label {
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .value {
+    color: var(--brand_dark);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .label {
+    font-family: "OldSansBlack";
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width: 998px) {
+    .label {
+      font-size: 10px;
+      max-width: 40px;
+    }
+  
+    .bar-active,
+    .bar-item {
+      width: 40px;
+    }
+  }
+  
+  /* Evolution */
+  .container-evolution {
+    background-color: var(--card_gray);
+    border-radius: 10px;
+    width: 100%;
+    padding: 14px 12px;
+  }
+  
+  .evolution-item {
+    background-color: var(--brand_dark);
+    padding: 20px 10px;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .evolution-item figure {
+    margin: 0;
+  }
+  
+  .evolution-item p {
+    margin-bottom: 0;
+  }
+  
+  .evolution-img {
+    border-radius: 100%;
+    width: 150px;
+    border: 1px solid white;
+    padding: 10px;
+  }
+  
+  .container-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .evolution-item {
+      width: 100%;
+    }
+  
+    .container-arrow {
+      transform: rotate(90deg);
+      margin: 20px 0;
+    }
+  }
+  
