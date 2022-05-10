@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GetImageById } from "../../utils/utils";
-import pokemon_placeholder from "../../assets/pokemon-placeholder.png";
+import pokemon_placeholder from "../../assets/img/pokemon-placeholder.png";
 import "./pokemon-style.css"
 const PokeCard = ({name, id, types, number, click}) => {
     const [error, setError] = useState(false);
@@ -17,7 +17,7 @@ const PokeCard = ({name, id, types, number, click}) => {
                 </div>
             </div>
             <figure className={`container-card-img position-relative my-4 container-${types[0].type.name}`}>
-                <Link to={click ? `/details/${name}` : 'javascript:void'}>
+                <Link to={click ? `/details/${name}` : 'javascript:void'} className="d-block">
                     { error ? ( <img alt={name} title={name} src={pokemon_placeholder} />) 
                     : ( <img
                         onError={(e) => setError(true)}
