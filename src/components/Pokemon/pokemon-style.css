@@ -27,7 +27,8 @@
     text-align: center;
     margin-top: 14px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    padding: 3px;
   }
   
   .pokemon-number {

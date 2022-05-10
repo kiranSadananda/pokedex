@@ -1,13 +1,14 @@
 .container-search {
     color: var(--darkest_gray);
-    font-size: 20px;
+    font-size: 24px;
   }
   
   .container-search input {
-    /* background-color: var(--brand_dark); */
+    background-color: transparent;
     border: none;
     color: var(--darkest_gray);
     width: 96%;
+    margin-left: 5px;
   }
   
   .container-search input:focus {
@@ -20,6 +21,7 @@
     border: 1px solid var(--card_gray);
     padding: 10px;
     border-radius: 10px;
+    margin-left: 5px;
   }
   
   .btn-clear {

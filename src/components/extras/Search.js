@@ -14,7 +14,7 @@ const Search = ({history, query}) => {
         <div className="container-search mb-4">
             <Form.Label>Name or Poke-ID</Form.Label>
             <div className="container-input-btn">
-                <input type="text" 
+                <input className="d-block" type="text" 
                  onChange={(e) => setSearchQuery(e.currentTarget.value)}
                  value={searchQuery}
                  placeholder="Ex. Pikachu or 025"
