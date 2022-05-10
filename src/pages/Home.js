@@ -16,38 +16,47 @@ const Home = ({history, ...props}) => {
     const [pokemons, setPokemons] = useState([])
 
     useEffect(() => {
-        setLoading(true)
-        let LocalPokeList = verifyPokemons()
-        if(LocalPokeList === null) {
-            loadPokemons()
-            return false
-        }
-        pokemonsList = LocalPokeList
-        handleResult(pokemonsList.length, pokemonsList.slice(0, perPage));
-        setLoading(false);
-    }, []);
-
-    useEffect(() => {
         setLoading(true);
         if (query === undefined) {
             handleResult(
                 pokemonsList.length,
                 pokemonsList.slice(0, perPage)
-          );
-          setLoading(false);
-          return false;
+            );
+            setLoading(false);
+            return false;
         }
-    
+
         history.push(`/${query}`);
         var filterPokemons = pokemonsList.filter((item) => {
-          return (
+            return (
             item.name.includes(query.toLowerCase()) || item.number.includes(query)
-          );
+            );
         });
-    
+
         handleResult(filterPokemons.length, filterPokemons.slice(0, perPage));
         setLoading(false);
-      }, [query]);
+    }, [query]);
+
+    useEffect(() => {
+        setLoading(true)
+        let LocalPokeList = verifyPokemons()
+        if(LocalPokeList === null) {
+            console.log(LocalPokeList)
+            loadPokemons()
+            return false
+        }
+        pokemonsList = LocalPokeList
+        if (query !== undefined) {
+            var filterPokemons = LocalPokeList.filter(
+              (i) => i.name.includes(query.toLowerCase()) || i.number.includes(query)
+            );
+            handleResult(filterPokemons.length, filterPokemons.slice(0, perPage));
+          } else {
+            handleResult(LocalPokeList.length, LocalPokeList.slice(0, perPage));
+          }
+        setLoading(false);
+    }, []);
+
     const loadPokemons = async () => {
         let pokeList = await api.get(`pokemon/?limit=${limit}`)
         let pokemonsDetails = [];
