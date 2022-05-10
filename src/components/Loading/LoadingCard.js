@@ -6,7 +6,6 @@ import Colors from "../../styles/Color";
 const LoadingCard = ({qty}) => {
     const RenderLoadingCard = () =>{
         let list = []
-
         for(let i =0; i <= qty; i++){
             list.push(
                 <Col xs={12} sm={6} lg={3} key={i}>

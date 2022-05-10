@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
+import ScrollToTop from "react-scroll-to-top";
 import Search from "../components/extras/Search";
 import Header from "../components/Header/Header";
 import LoadingCard from "../components/Loading/LoadingCard";
@@ -17,6 +18,7 @@ const Home = ({history, ...props}) => {
 
     useEffect(() => {
         setLoading(true);
+        window.scrollTo(0, 0)
         if (query === undefined) {
             handleResult(
                 pokemonsList.length,
@@ -39,6 +41,7 @@ const Home = ({history, ...props}) => {
 
     useEffect(() => {
         setLoading(true)
+        window.scrollTo(0, 0)
         let LocalPokeList = verifyPokemons()
         if(LocalPokeList === null) {
             console.log(LocalPokeList)
@@ -83,9 +86,10 @@ const Home = ({history, ...props}) => {
     return(
         <div>
             <Header/>
+            <ScrollToTop smooth color="#000"/>
             <Container fluid>
             <Search history={history} query={query} />
-                {loading ? (<LoadingCard qty={12}/>) : (
+                {loading ? (<LoadingCard qty={7}/>) : (
                     <Row>
                         {pokemons.map((item) => {
                             return (
