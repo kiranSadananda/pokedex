@@ -4,7 +4,7 @@ import Details from "./pages/Details";
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route component={Home} exact  path="/"/>
+            <Route component={Home} exact  path="/:query?"/>
             <Route component={Details} exact path="/details/:name?" />
         </Switch>
     </BrowserRouter>

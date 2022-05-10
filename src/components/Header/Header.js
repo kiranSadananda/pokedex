@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../../assets/pokedex.png";
+import logo from "../../assets/img/pokedex.png";
 import "./header.css"
 const Header = () => {
     return(
