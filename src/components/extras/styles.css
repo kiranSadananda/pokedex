@@ -1,0 +1,29 @@
+.container-search {
+    color: var(--darkest_gray);
+    font-size: 20px;
+  }
+  
+  .container-search input {
+    /* background-color: var(--brand_dark); */
+    border: none;
+    color: var(--darkest_gray);
+    width: 96%;
+  }
+  
+  .container-search input:focus {
+    /* background-color: var(--brand_dark); */
+  }
+  
+  .container-input-btn {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--card_gray);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .btn-clear {
+    background: none;
+    border: none;
+    border-radius: 4px;
+  }
