@@ -36,13 +36,13 @@ const LoadingDetails = () => {
         </div>
       </Col>
 
-      {/* <Col xs={12}>
+      <Col xs={12}>
         <div style={{ height: 290 }} className="loading-item mb-3 p-3">
           <SkeletonTheme color={Colors.lighter_gray} highlightColor="#f2f2f2">
             <Skeleton height={250} />
           </SkeletonTheme>
         </div>
-      </Col> */}
+      </Col>
     </Row>
   );
 };

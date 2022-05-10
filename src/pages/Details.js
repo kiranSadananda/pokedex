@@ -10,8 +10,8 @@ import api from '../services/api';
 import PokeOverview from '../components/Pokemon/PokeOverview';
 import PokeInfo from '../components/Pokemon/PokeInfo';
 import PokeStats from '../components/Pokemon/PokeStats';
-import { faBullseye } from '@fortawesome/free-solid-svg-icons';
 import LoadingDetails from '../components/Loading/LoadingDetails';
+import PokeEvolution from '../components/Pokemon/PokeEvolution';
 const Details = ({history, ...props}) => {
     const [{name}, setName] = useState(props.match.params)
     const [loading, setLoading] = useState(true)
@@ -29,8 +29,7 @@ const Details = ({history, ...props}) => {
             LoadSpecies(response.data);
           }
         }).catch((error) => {
-        //   setShowModalError(true);
-        console.log(error);
+            console.log(error);
         });
     }
 
@@ -78,7 +77,6 @@ const Details = ({history, ...props}) => {
                 evolution: pokeEvolution.data.chain,
               };
               setDetails(detailsPageData)
-              console.log(detailsPageData)
               setLoading(false)
         } catch (error) {
             console.log(error);
@@ -120,6 +118,7 @@ const Details = ({history, ...props}) => {
                         <PokeStats stats={details.stats} types={details.types} />
                     </Col>
                 </Row>
+                <PokeEvolution data={details.evolution} types={details.types} />
                 </>
                 )}
             </Container>

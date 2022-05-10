@@ -643,10 +643,11 @@
   
   /* Evolution */
   .container-evolution {
-    background-color: var(--card_gray);
     border-radius: 10px;
     width: 100%;
-    padding: 14px 12px;
+    padding: 25px 14px;
+    -webkit-box-shadow: 1px 0px 11px 4px rgba(64,64,64,0.8); 
+    box-shadow: 1px 0px 11px 4px rgba(64,64,64,0.8);
   }
   
   .evolution-item {
