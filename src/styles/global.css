@@ -68,7 +68,9 @@
   *:hover {
     outline: none !important;
   }
-  
+  a, a:hover{
+    color: #333333;
+  }
   button:focus,
   input:focus {
     outline: none !important;

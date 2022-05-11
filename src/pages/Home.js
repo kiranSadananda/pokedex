@@ -85,7 +85,7 @@ const Home = ({history, ...props}) => {
     }
     return(
         <div>
-            <Header/>
+            <Header isHomeRequired=""/>
             <ScrollToTop smooth color="#000"/>
             <Container fluid>
             <Search history={history} query={query} />

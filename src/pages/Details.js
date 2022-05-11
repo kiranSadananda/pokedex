@@ -84,7 +84,7 @@ const Details = ({history, ...props}) => {
     }
    return(
        <div>
-            <Header/>
+            <Header isHomeRequired="true"/>
             <Container fluid className="mb-4">
                 {loading ? (<LoadingDetails/>) : (
                 <>
